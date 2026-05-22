@@ -2,11 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "f718ad70-f2b7-47f2-9e5e-4e1cc36c8ded"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "IATA": {
+    "ea11834u202423752": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "IATA:build:production"
+              "buildTarget": "ea11834u202423752:build:production"
             },
             "development": {
-              "buildTarget": "IATA:build:development"
+              "buildTarget": "ea11834u202423752:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,0 +1,55 @@
+{
+  "common": {
+    "close": "Close"
+  },
+  "toolbar": {
+    "title": "IATA Flight Monitoring Platform"
+  },
+  "option": {
+    "home": "Home",
+    "new-flight-record": "New Flight Record"
+  },
+  "home": {
+    "title": "Home",
+    "content": "International Flight Monitoring."
+  },
+  "my-flight-records": {
+    "title": "My Flight Records",
+    "empty": "Empty"
+  },
+  "flight-item-summary": {
+    "airline": "Airline",
+    "departure": "Departure",
+    "arrival": "Arrival",
+    "status": "Status",
+    "registered-at": "Registered At"
+  },
+  "new-flight-record": {
+    "title": "New Flight Record",
+    "subtitle": "Register International Flight Information.",
+    "form": {
+      "region-code": "Region Code",
+      "flight": "Flight",
+      "loading-flights": "Loading flights from AviationStack...",
+      "no-flights": "No flights available for the selected region.",
+      "cancelled-warning": "Cancelled flights cannot be registered.",
+      "create": "Create",
+      "cancel": "Cancel"
+    },
+    "feedback": {
+      "created": "Flight record created successfully.",
+      "create-failed": "Failed to create the flight record. Please try again.",
+      "cannot-register": "The selected flight cannot be registered."
+    }
+  },
+  "page-not-found": {
+    "title": "Page Not Found",
+    "content": "The path <strong>{{ invalid_path }}</strong> is not valid.",
+    "go-home": "Go Home"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "powered-by": "Powered by",
+    "and": "and"
+  }
+}

@@ -1,0 +1,54 @@
+.new-flight-record {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.new-flight-record h1 {
+  margin: 0 0 8px;
+  color: #0a2540;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #455a64;
+}
+
+.form-card {
+  padding: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  color: #455a64;
+}
+
+.empty {
+  color: #ef6c00;
+  font-style: italic;
+}
+
+.preview {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f1f8ff;
+  border-left: 4px solid #1565c0;
+  border-radius: 4px;
+}
+
+.preview p {
+  margin: 4px 0;
+}
+
+.warning {
+  color: #c62828;
+  font-weight: 600;
+}

@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" role="banner" class="mat-toolbar">
+  <mat-toolbar-row>
+    <img [src]="logoUrl" alt="IATA logo" class="toolbar-logo"/>
+    <h1 class="toolbar-title">{{ 'toolbar.title' | translate }}</h1>
+    <div class="mat-spacer"></div>
+    <nav role="navigation" aria-label="Main navigation" class="toolbar-nav">
+      @for (option of options(); track option.label) {
+        <a mat-button
+           style="color: white"
+           [routerLink]="option.link"
+           routerLinkActive="active"
+           [attr.aria-label]="option.label | translate">
+          {{ option.label | translate }}
+        </a>
+      }
+    </nav>
+    <div class="mat-spacer"></div>
+    <app-language-switcher/>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<main role="main">
+  <router-outlet/>
+</main>
+
+<app-footer-content/>

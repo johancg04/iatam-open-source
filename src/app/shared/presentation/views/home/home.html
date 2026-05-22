@@ -1,0 +1,20 @@
+<section class="home container-with-spacing" aria-labelledby="home-title">
+  <h1 id="home-title">{{ 'home.title' | translate }}</h1>
+  <p class="home-content">{{ 'home.content' | translate }}</p>
+
+  <section class="my-flight-records" aria-labelledby="my-flight-records-title">
+    <h2 id="my-flight-records-title">{{ 'my-flight-records.title' | translate }}</h2>
+
+    @if (store.isEmpty()) {
+      <p class="empty">{{ 'my-flight-records.empty' | translate }}</p>
+    } @else {
+      <mat-grid-list [cols]="columns()" rowHeight="260px" gutterSize="16px">
+        @for (item of store.flightItems(); track item.id) {
+          <mat-grid-tile>
+            <app-flight-item-summary [flightItem]="item"/>
+          </mat-grid-tile>
+        }
+      </mat-grid-list>
+    }
+  </section>
+</section>

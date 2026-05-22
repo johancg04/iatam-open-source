@@ -1,0 +1,86 @@
+{
+  "flight-monitoring-hubs": [
+    {
+      "id": 1,
+      "name": "North America Flight Hub",
+      "regionCode": "NAM"
+    },
+    {
+      "id": 2,
+      "name": "Latin America Flight Hub",
+      "regionCode": "LATAM"
+    },
+    {
+      "id": 3,
+      "name": "Europe Flight Hub",
+      "regionCode": "EUR"
+    },
+    {
+      "id": 4,
+      "name": "Middle East and Africa Flight Hub",
+      "regionCode": "MEA"
+    },
+    {
+      "id": 5,
+      "name": "Asia Pacific Flight Hub",
+      "regionCode": "APAC"
+    }
+  ],
+  "flight-items": [
+    {
+      "id": 1,
+      "hubId": 2,
+      "regionCode": "LATAM",
+      "flightNumber": "LA2480",
+      "airlineName": "LATAM Airlines",
+      "departureAirport": "Jorge Chavez International",
+      "arrivalAirport": "Miami International",
+      "flightStatus": "scheduled",
+      "registeredAt": "2026-05-17T10:30:00"
+    },
+    {
+      "id": 2,
+      "hubId": 1,
+      "regionCode": "NAM",
+      "flightNumber": "AA102",
+      "airlineName": "American Airlines",
+      "departureAirport": "Dallas Fort Worth International",
+      "arrivalAirport": "John F. Kennedy International",
+      "flightStatus": "active",
+      "registeredAt": "2026-05-17T11:00:00"
+    },
+    {
+      "id": 3,
+      "hubId": 3,
+      "regionCode": "EUR",
+      "flightNumber": "IB6401",
+      "airlineName": "Iberia",
+      "departureAirport": "Adolfo Suarez Madrid-Barajas",
+      "arrivalAirport": "Charles de Gaulle",
+      "flightStatus": "landed",
+      "registeredAt": "2026-05-17T12:15:00"
+    },
+    {
+      "hubId": 2,
+      "regionCode": "LATAM",
+      "flightNumber": "LA281",
+      "airlineName": "LATAM Airlines",
+      "departureAirport": "Arturo Merino Benitez",
+      "arrivalAirport": "Teniente Vidal",
+      "flightStatus": "scheduled",
+      "registeredAt": "2026-05-22T05:14:41.515Z",
+      "id": 4
+    },
+    {
+      "hubId": 1,
+      "regionCode": "NAM",
+      "flightNumber": "AA8687",
+      "airlineName": "American Airlines",
+      "departureAirport": "Barajas",
+      "arrivalAirport": "El Prat De Llobregat",
+      "flightStatus": "active",
+      "registeredAt": "2026-05-22T07:10:18.925Z",
+      "id": 5
+    }
+  ]
+}

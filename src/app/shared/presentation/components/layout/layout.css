@@ -1,0 +1,40 @@
+.mat-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  background: #0a2540;
+  color: white;
+}
+
+.toolbar-logo {
+  height: 32px;
+  width: auto;
+  margin-right: 12px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.toolbar-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+main {
+  display: block;
+  min-height: calc(100vh - 128px);
+  padding: 16px;
+}
+
+@media (max-width: 720px) {
+  .toolbar-title {
+    font-size: 14px;
+  }
+  .toolbar-logo {
+    height: 24px;
+  }
+}

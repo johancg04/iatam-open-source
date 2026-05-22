@@ -1,0 +1,55 @@
+{
+  "common": {
+    "close": "Cerrar"
+  },
+  "toolbar": {
+    "title": "IATA Plataforma de Monitoreo de Vuelos"
+  },
+  "option": {
+    "home": "Inicio",
+    "new-flight-record": "Nuevo Registro de Vuelo"
+  },
+  "home": {
+    "title": "Inicio",
+    "content": "Monitoreo de Vuelos Internacionales."
+  },
+  "my-flight-records": {
+    "title": "Mis Registros de Vuelo",
+    "empty": "Vacío"
+  },
+  "flight-item-summary": {
+    "airline": "Aerolínea",
+    "departure": "Salida",
+    "arrival": "Llegada",
+    "status": "Estado",
+    "registered-at": "Registrado el"
+  },
+  "new-flight-record": {
+    "title": "Nuevo Registro de Vuelo",
+    "subtitle": "Registrar información de vuelo internacional.",
+    "form": {
+      "region-code": "Código de Región",
+      "flight": "Vuelo",
+      "loading-flights": "Cargando vuelos desde AviationStack...",
+      "no-flights": "No hay vuelos disponibles para la región seleccionada.",
+      "cancelled-warning": "Los vuelos cancelados no pueden registrarse.",
+      "create": "Crear",
+      "cancel": "Cancelar"
+    },
+    "feedback": {
+      "created": "Registro de vuelo creado correctamente.",
+      "create-failed": "No se pudo crear el registro de vuelo. Intenta nuevamente.",
+      "cannot-register": "El vuelo seleccionado no puede registrarse."
+    }
+  },
+  "page-not-found": {
+    "title": "Página No Encontrada",
+    "content": "La ruta <strong>{{ invalid_path }}</strong> no es válida.",
+    "go-home": "Ir a Inicio"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "powered-by": "Hecho con",
+    "and": "y"
+  }
+}

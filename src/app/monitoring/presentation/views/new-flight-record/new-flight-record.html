@@ -1,0 +1,69 @@
+<section class="new-flight-record container-with-spacing" aria-labelledby="new-flight-record-title">
+  <h1 id="new-flight-record-title">{{ 'new-flight-record.title' | translate }}</h1>
+  <h2 class="subtitle">{{ 'new-flight-record.subtitle' | translate }}</h2>
+
+  <mat-card class="form-card">
+    <mat-card-content>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>{{ 'new-flight-record.form.region-code' | translate }}</mat-label>
+        <mat-select [value]="selectedRegionCode()"
+                    (selectionChange)="onRegionSelected($event.value)"
+                    aria-label="Region code">
+          @for (region of regionCodes; track region) {
+            <mat-option [value]="region">{{ region }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      @if (loadingFlights()) {
+        <div class="loading">
+          <mat-spinner diameter="32"></mat-spinner>
+          <span>{{ 'new-flight-record.form.loading-flights' | translate }}</span>
+        </div>
+      }
+
+      @if (!loadingFlights() && selectedRegionCode() && availableFlights().length === 0) {
+        <p class="empty">{{ 'new-flight-record.form.no-flights' | translate }}</p>
+      }
+
+      @if (!loadingFlights() && availableFlights().length > 0) {
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'new-flight-record.form.flight' | translate }}</mat-label>
+          <mat-select [value]="selectedFlightNumber()"
+                      (selectionChange)="onFlightSelected($event.value)"
+                      aria-label="Flight">
+            @for (flight of availableFlights(); track flight.flightNumber) {
+              <mat-option [value]="flight.flightNumber">
+                {{ flight.flightNumber }} — {{ flight.airlineName }} ({{ flight.flightStatus }})
+              </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      }
+
+      @if (selectedFlight()) {
+        <div class="preview" aria-live="polite">
+          <p><strong>{{ 'flight-item-summary.airline' | translate }}:</strong> {{ selectedFlight()?.airlineName }}</p>
+          <p><strong>{{ 'flight-item-summary.departure' | translate }}:</strong> {{ selectedFlight()?.departureAirport }}</p>
+          <p><strong>{{ 'flight-item-summary.arrival' | translate }}:</strong> {{ selectedFlight()?.arrivalAirport }}</p>
+          <p><strong>{{ 'flight-item-summary.status' | translate }}:</strong> {{ selectedFlight()?.flightStatus }}</p>
+          @if (selectedFlight()?.isCancelled()) {
+            <p class="warning" role="alert">{{ 'new-flight-record.form.cancelled-warning' | translate }}</p>
+          }
+        </div>
+      }
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-button type="button" (click)="cancel()" aria-label="Cancel">
+        {{ 'new-flight-record.form.cancel' | translate }}
+      </button>
+      <button mat-raised-button color="primary" type="button"
+              [disabled]="!canCreate()"
+              (click)="create()"
+              aria-label="Create flight record">
+        {{ 'new-flight-record.form.create' | translate }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</section>
